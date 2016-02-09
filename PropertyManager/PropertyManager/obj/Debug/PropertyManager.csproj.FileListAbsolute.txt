@@ -36,3 +36,6 @@ C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\AutoM
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\AutoMapper.xml
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.FixingClosedColumnOnWorkOrder.resources
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.AddressIdNameFix.resources
+C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Cors.dll
+C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Cors.dll
+C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Cors.xml
