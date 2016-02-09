@@ -1,0 +1,12 @@
+{
+  "name": "PropertyManager.Web",
+  "homepage": "https://github.com/cduflo/18-PropertyManager",
+  "authors": [
+    "Chris Duflo <chris.duflo@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true
+}

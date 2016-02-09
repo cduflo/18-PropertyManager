@@ -64,16 +64,18 @@ namespace PropertyManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != address.AddressID)
+            if (id != address.AddressId)
             {
                 return BadRequest();
             }
 
+            //grab entry from db
             var dbAddress = db.Addresses.Find(id);
+            //save entry fetched
             dbAddress.Update(address);
-
+            //mark entry as modified
             db.Entry(dbAddress).State = EntityState.Modified;
-
+            //save changes
             try
             {
                 db.SaveChanges();
@@ -107,9 +109,9 @@ namespace PropertyManager.Controllers
             db.Addresses.Add(add);
             db.SaveChanges();
 
-            address.AddressID = add.AddressID;
+            address.AddressId = add.AddressId;
             
-            return CreatedAtRoute("DefaultApi", new { id = address.AddressID }, address);
+            return CreatedAtRoute("DefaultApi", new { id = address.AddressId }, address);
         }
 
         // DELETE: api/Addresses/5
@@ -139,7 +141,7 @@ namespace PropertyManager.Controllers
 
         private bool AddressExists(int id)
         {
-            return db.Addresses.Count(e => e.AddressID == id) > 0;
+            return db.Addresses.Count(e => e.AddressId == id) > 0;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyManager.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,13 +17,4 @@ namespace PropertyManager.Models
         public Priorities Priority { get; set; }
     }
 
-
-    public enum Priorities
-    {
-        Critical = 1,
-        Urgent = 2,
-        High = 3,
-        Medium = 4,
-        Low = 5
-    }
 }

@@ -35,3 +35,4 @@ C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\AutoMapper.dll
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\AutoMapper.xml
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.FixingClosedColumnOnWorkOrder.resources
+C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.AddressIdNameFix.resources

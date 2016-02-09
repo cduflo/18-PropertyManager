@@ -120,6 +120,10 @@
     <Compile Include="Migrations\201602082250261_FixingClosedColumnOnWorkOrder.Designer.cs">
       <DependentUpon>201602082250261_FixingClosedColumnOnWorkOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602091733357_AddressIdNameFix.cs" />
+    <Compile Include="Migrations\201602091733357_AddressIdNameFix.Designer.cs">
+      <DependentUpon>201602091733357_AddressIdNameFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddressesModel.cs" />
     <Compile Include="Models\LeasesModel.cs" />
@@ -147,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602082250261_FixingClosedColumnOnWorkOrder.resx">
       <DependentUpon>201602082250261_FixingClosedColumnOnWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602091733357_AddressIdNameFix.resx">
+      <DependentUpon>201602091733357_AddressIdNameFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
