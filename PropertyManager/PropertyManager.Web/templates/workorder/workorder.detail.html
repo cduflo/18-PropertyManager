@@ -1,1 +1,67 @@
 ﻿
+<div class="container-fluid">
+    <div class="text-center">
+        <h1>{{workorder.WorkOrderId}}</h1>
+    </div>
+    <form class="form-horizontal" role="form" style="margin-top:60px;">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputPriority" class="col-md-4 control-label">Priority:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.Priority" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputDescription" class="col-md-4 control-label">Description:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.Description" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputTenantId" class="col-md-4 control-label">TenantId:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.TenantId" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputPropertyId" class="col-md-4 control-label">PropertyId:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.PropertyId" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputOpened" class="col-md-4 control-label">Opened:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.OpenedDate" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputClosed" class="col-md-4 control-label">Closed:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.ClosedDate" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <button class="btn btn-success pull-right" ng-click="saveWorkOrder()" style="width:100%">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
