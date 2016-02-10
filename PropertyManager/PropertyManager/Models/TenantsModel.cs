@@ -13,5 +13,6 @@ namespace PropertyManager.Models
         public int AddressId { get; set; }
         public string Telephone { get; set; }
         public string EmailAddress { get; set; }
+        public AddressesModel Address { get; set; }
     }
 }

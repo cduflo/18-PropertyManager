@@ -29,6 +29,7 @@ namespace PropertyManager.Domain
             NumberOfBathrooms = p.NumberOfBathrooms;
             NumberOfBedrooms = p.NumberOfBedrooms;
             NumberofVehicles = p.NumberofVehicles;
+            Address.Update(p.Address);
         }
     }
 }

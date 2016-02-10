@@ -39,3 +39,4 @@ C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Cors.dll
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Cors.dll
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Cors.xml
+C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.fixingPropModel.resources

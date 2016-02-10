@@ -3,4 +3,9 @@
     //grab property from /api/properies/{propertyId}
     $scope.property = PropertyResource.get({ propertyId: $stateParams.id });
     
+
+    $scope.saveProperty = function () {
+        $scope.property.$update();
+        alert("Save Successful!");
+    };
 });

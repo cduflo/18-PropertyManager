@@ -27,6 +27,7 @@ namespace PropertyManager.Domain
             AddressId = t.AddressId;
             Telephone = t.Telephone;
             EmailAddress = t.EmailAddress;
+            Address.Update(t.Address);
         }
     }
 }

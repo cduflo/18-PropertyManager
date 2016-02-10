@@ -1,1 +1,96 @@
-﻿<pre>{{property | json}}</pre>
+﻿
+<div class="container-fluid">
+    <div class="text-center">
+        <h1>{{property.PropertyName}}</h1>
+    </div>
+    <form class="form-horizontal" role="form" style="margin-top:60px;">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputPropertyName" class="col-md-4 control-label">Property Name:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.PropertyName" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddress1" class="col-md-4 control-label">Address 1:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.Address.Address1" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddress2" class="col-md-4 control-label">Address 2:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.Address.Address2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddressCity" class="col-md-4 control-label">City:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.Address.City" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddressRegion" class="col-md-4 control-label">Region:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.Address.Region" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddressPostCode" class="col-md-4 control-label">Post Code:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.Address.PostCode" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputSquareFeet" class="col-md-4 control-label">Square Feet:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.SquareFeet" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputBeds" class="col-md-4 control-label">Bedrooms:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.NumberOfBedrooms" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputBaths" class="col-md-4 control-label">Bathrooms:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.NumberOfBathrooms" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputVehicles" class="col-md-4 control-label">Parking Spaces:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="property.NumberofVehicles" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <button class="btn btn-success pull-right" ng-click="saveProperty()" style="width:100%">
+                        Save
+                    </button>
+                </div>
+            </div>

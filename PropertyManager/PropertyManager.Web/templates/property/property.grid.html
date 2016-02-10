@@ -17,6 +17,7 @@
         <tr ng-repeat="property in properties">
             <td>{{property.PropertyName}}</td>
             <td>{{property.Address.Address1}}</td>
+            <td>{{property.Address.Address2}}</td>
             <td>{{property.Address.City}}</td>
             <td>{{property.Address.Region}}</td>
             <td>{{property.Address.PostCode}}</td>
@@ -28,7 +29,7 @@
                 <a class="btn btn-info" ng-href="#/property/detail/{{property.PropertyId}}">
                     <i class="fa fa-edit"/>
                 </a>
-                <a class="btn btn-danger">
+                <a class="btn btn-danger pull-right">
                     <i class="fa fa-close"/>
                 </a>
             </td>
