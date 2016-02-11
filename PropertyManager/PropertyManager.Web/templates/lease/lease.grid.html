@@ -1,4 +1,15 @@
-﻿<table class="table table-striped table-responsive">
+﻿<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:right">
+            <button class="btn btn-success pull-right" ng-href="#/lease/add">
+                Add
+            </button>
+        </div>
+    </div>
+</div>
+<table class="table table-striped table-responsive">
     <thead>
         <tr>
             <th>Lease Number</th>
@@ -15,7 +26,7 @@
         <tr ng-repeat="lease in leases">
             <td>{{lease.LeaseId}}</td>
             <td>{{lease.Property.PropertyName}}</td>
-            <td>{{lease.Tenant.FirstName}}</td>
+            <td>{{lease.Tenant.FirstName}} {{lease.Tenant.LastName}}</td>
             <td>{{lease.StartDate}}</td>
             <td>{{lease.EndDate}}</td>
             <td>{{lease.Rent}}</td>
@@ -24,7 +35,7 @@
                 <a class="btn btn-info" ng-href="#/lease/detail/{{lease.LeaseId}}">
                     <i class="fa fa-edit" />
                 </a>
-                <a class="btn btn-danger pull-right">
+                <a class="btn btn-danger pull-right" ng-click="deleteLease(lease)">
                     <i class="fa fa-close" />
                 </a>
             </td>

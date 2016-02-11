@@ -1,34 +1,20 @@
-﻿
+﻿<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:right">
+            <button class="btn btn-success pull-right" ng-href="#/lease/add">
+                Add
+            </button>
+        </div>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="text-center">
-        <h1>{{lease.LeaseId}}</h1>
+        <h1>Lease Detail: #{{title}}</h1>
     </div>
     <form class="form-horizontal" role="form" style="margin-top:60px;">
         <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="form-group">
-                    <label for="inputLeaseNumber" class="col-md-4 control-label">Lease Number:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="lease.LeaseId" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="form-group">
-                    <label for="inputPropName" class="col-md-4 control-label">Property:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="lease.Property.PropertyName" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="form-group">
-                    <label for="inputTenant" class="col-md-4 control-label">Tenant:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="lease.Tenant.FirstName" />
-                    </div>
-                </div>
-            </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
                     <label for="inputStartDate" class="col-md-4 control-label">Start Date:</label>
@@ -61,14 +47,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="col-md-4"></div>
-                <div class="col-md-8">
-                    <button class="btn btn-success pull-right" ng-click="saveLease()" style="width:100%">
-                        Save
-                    </button>
-                </div>
-            </div>
         </div>
     </form>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:center">
+            <button class="btn btn-success" ng-click="saveLease()" style="width:100%">
+                Save
+            </button>
+        </div>
+        <div class="col-md-4" style="text-align:center"></div>
+    </div>
 </div>
