@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('TenantGridController', function ($scope, $state, TenantResource) {
+﻿angular.module('app').controller('TenantGridController', function ($scope, $state, $stateParams, TenantResource) {
     function activate() {
         $scope.tenants = TenantResource.query();
     }

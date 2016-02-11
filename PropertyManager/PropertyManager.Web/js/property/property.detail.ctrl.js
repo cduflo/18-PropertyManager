@@ -2,7 +2,7 @@
     //grab id from url bar
     //grab property from /api/properies/{propertyId}
     $scope.property = PropertyResource.get({ propertyId: $stateParams.id });
-    $scope.title = "Property Detail: {{property.PropertyId}}";
+    $scope.title = "Property Detail";
 
     $scope.saveProperty = function () {
         $scope.property.$update();

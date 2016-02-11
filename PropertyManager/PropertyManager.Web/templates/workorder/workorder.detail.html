@@ -1,15 +1,78 @@
-﻿
+﻿<pre>{{workorder | json}}</pre>
+<div class="container-fluid">
+
+</div>
+
+<div class="container-fluid">
+  
+</div>
+
+<!--<pre>{{workorder | json}}</pre>
+<div class="container-fluid">
+        <label>Label</label>
+        <select name="repeatSelect" id="repeatSelect" ng-model="workorder.Property" class="selectpicker">
+            <option ng-repeat="property in properties" value="{{property}}">{{property.PropertyName}}</option>
+        </select>
+</div>-->
+<!--<div class="container-fluid">
+    <label>Label</label>
+    <select name="repeatTenant" id="repeatTenant" ng-model="workorder.TenantId">
+        <option ng-repeat="tenant in tenants" value="{{tenant.TenantId}}">{{workorder.Tenant.FirstName}}</option>
+    </select>
+</div>-->
+
+
 <div class="container-fluid">
     <div class="text-center">
-        <h1>Work Order Detail: #{{title}}</h1>
+        <h1>{{title}}</h1>
     </div>
     <form class="form-horizontal" role="form" style="margin-top:60px;">
         <div class="row">
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
+                    <label for="inputID" class="col-md-4 control-label">Work Order ID:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="workorder.WorkOrderId" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
                     <label for="inputDescription" class="col-md-4 control-label">Description:</label>
                     <div class="col-md-8">
                         <input type="text" class="form-control" ng-model="workorder.Description" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputProperty" class="col-md-4 control-label">Property:</label>
+                    <div class="col-md-8">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                {{workorder.Property.PropertyName}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="property in properties"><a ng-click="propselect(property)">{{property.PropertyName}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputTenant" class="col-md-4 control-label">Tenant:</label>
+                    <div class="col-md-8" >
+                        <div class="dropdown" >
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:auto">
+                               {{workorder.Tenant.FirstName}} {{workorder.Tenant.LastName}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="tenant in tenants"><a ng-click="tenantselect(tenant)">{{tenant.FirstName}} {{tenant.LastName}}</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,11 +108,11 @@
 <div class="container-fluid">
     <div class="text-center">
         <div class="col-md-4" style="text-align:center"></div>
-            <div class="col-md-4" style="text-align:center">
-                <button class="btn btn-success" ng-click="saveWorkOrder()" style="width:100%">
-                    Save
-                </button>
-            </div>
-        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:center">
+            <button class="btn btn-success" ng-click="saveWorkOrder()" style="width:100%">
+                Save
+            </button>
         </div>
+        <div class="col-md-4" style="text-align:center"></div>
+    </div>
 </div>

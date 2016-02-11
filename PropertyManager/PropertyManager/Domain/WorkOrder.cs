@@ -27,8 +27,7 @@ namespace PropertyManager.Domain
             OpenedDate = w.OpenedDate;
             ClosedDate = w.ClosedDate;
             Priority = (Priorities)w.Priority;
-            Tenant.Update(w.Tenant);
-            Property.Update(w.Property);
+
         }
     }
 

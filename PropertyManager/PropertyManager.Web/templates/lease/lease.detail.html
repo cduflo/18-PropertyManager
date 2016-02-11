@@ -1,20 +1,50 @@
-﻿<div class="container-fluid">
-    <div class="text-center">
-        <div class="col-md-4" style="text-align:center"></div>
-        <div class="col-md-4" style="text-align:center"></div>
-        <div class="col-md-4" style="text-align:right">
-            <button class="btn btn-success pull-right" ng-href="#/lease/add">
-                Add
-            </button>
-        </div>
-    </div>
-</div>
+﻿
 <div class="container-fluid">
     <div class="text-center">
-        <h1>Lease Detail: #{{title}}</h1>
+        <h1>{{title}}</h1>
     </div>
     <form class="form-horizontal" role="form" style="margin-top:60px;">
         <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputID" class="col-md-4 control-label">Lease ID:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="lease.LeaseId" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputTenantId" class="col-md-4 control-label">Tenant:</label>
+                    <div class="col-md-8">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:auto">
+                                {{lease.Tenant.FirstName}} {{lease.Tenant.LastName}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="tenant in tenants"><a ng-click="tenantselect(tenant)">{{tenant.FirstName}} {{tenant.LastName}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputPropID" class="col-md-4 control-label">Property:</label>
+                    <div class="col-md-8">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                {{lease.Property.PropertyName}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="property in properties"><a ng-click="propselect(property)">{{property.PropertyName}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
                     <label for="inputStartDate" class="col-md-4 control-label">Start Date:</label>

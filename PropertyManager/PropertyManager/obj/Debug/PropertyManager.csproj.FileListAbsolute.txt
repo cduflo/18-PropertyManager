@@ -27,7 +27,6 @@ C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\Newto
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Net.Http.Formatting.xml
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.xml
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.WebHost.xml
-C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.csprojResolveAssemblyReference.cache
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.dll
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.pdb
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.InitialMigration.resources
@@ -40,3 +39,4 @@ C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\Syste
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Cors.dll
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Cors.xml
 C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.Migrations.fixingPropModel.resources
+C:\dev\OneDrive\origin\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.csprojResolveAssemblyReference.cache

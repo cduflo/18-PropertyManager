@@ -3,9 +3,9 @@
         <div class="col-md-4" style="text-align:center"></div>
         <div class="col-md-4" style="text-align:center"></div>
         <div class="col-md-4" style="text-align:right">
-            <button class="btn btn-success pull-right" ng-href="#/workorder/add">
+            <a class="btn btn-success pull-right" ng-href="#/workorder/add">
                 Add
-            </button>
+            </a>
         </div>
     </div>
 </div>
@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>Work Order ID</th>
-            <th>Priority</th>
-            <th>Description</th>
-            <th>Tenant ID</th>
             <th>Property ID</th>
+            <th>Tenant ID</th>
+            <th>Description</th>
+            <th>Priority</th>
             <th>Opened Date</th>
             <th>Closed Date</th>
         </tr>
@@ -25,13 +25,13 @@
 
         <tr ng-repeat="workorder in workorders">
             <td>{{workorder.WorkOrderId}}</td>
-            <td>{{workorder.Priority}}</td>
-            <td>{{workorder.Description}}</td>
-            <td>{{workorder.TenantId}}</td>
             <td>{{workorder.PropertyId}}</td>
+            <td>{{workorder.TenantId}}</td>
+            <td>{{workorder.Description}}</td>
+            <td>{{workorder.Priority}}</td>
             <td>{{workorder.OpenedDate}}</td>
             <td>{{workorder.ClosedDate}}</td>
-            <td>
+            <td style="min-width:100px;">
                 <a class="btn btn-info" ng-href="#/workorder/detail/{{workorder.WorkOrderId}}">
                     <i class="fa fa-edit" />
                 </a>

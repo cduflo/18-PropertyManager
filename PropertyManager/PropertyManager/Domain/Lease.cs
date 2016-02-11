@@ -28,9 +28,6 @@ namespace PropertyManager.Domain
             EndDate = l.EndDate;
             Rent = l.Rent;
             RentFrequency = (RentFrequencies)l.RentFrequency;
-            Property.Update(l.Property);
-            Tenant.Update(l.Tenant);
-
         }
     }
 

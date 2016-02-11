@@ -1,10 +1,18 @@
 ﻿
 <div class="container-fluid">
     <div class="text-center">
-        <h1>Tenant Detail: #{{title}}</h1>
+        <h1>{{title}}</h1>
     </div>
     <form class="form-horizontal" role="form" style="margin-top:60px;">
         <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputID" class="col-md-4 control-label">Tenant ID:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.TenantId" disabled />
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
                     <label for="inputFirstName" class="col-md-4 control-label">First Name:</label>
@@ -31,12 +39,21 @@
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
-                    <label for="inputEmail" class="col-md-4 control-label">City:</label>
+                    <label for="inputEmail" class="col-md-4 control-label">Email:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="tenant.Email" />
+                        <input type="text" class="form-control" ng-model="tenant.EmailAddress" />
                     </div>
                 </div>
             </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <h1>Address</h1>
+    </div>
+    <form class="form-horizontal" role="form" style="margin-top:60px;">
+        <div class="row">
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
                     <label for="inputAddress1" class="col-md-4 control-label">Address 1:</label>
@@ -55,7 +72,7 @@
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
-                    <label for="inputCity" class="col-md-4 control-label">Square Feet:</label>
+                    <label for="inputCity" class="col-md-4 control-label">City:</label>
                     <div class="col-md-8">
                         <input type="text" class="form-control" ng-model="tenant.Address.City" />
                     </div>
@@ -63,7 +80,7 @@
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
-                    <label for="inputRegion" class="col-md-4 control-label">Bedrooms:</label>
+                    <label for="inputRegion" class="col-md-4 control-label">Region:</label>
                     <div class="col-md-8">
                         <input type="text" class="form-control" ng-model="tenant.Address.Region" />
                     </div>
@@ -71,7 +88,7 @@
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
-                    <label for="inputPostCode" class="col-md-4 control-label">Bathrooms:</label>
+                    <label for="inputPostCode" class="col-md-4 control-label">Post Code:</label>
                     <div class="col-md-8">
                         <input type="text" class="form-control" ng-model="tenant.Address.PostCode" />
                     </div>
