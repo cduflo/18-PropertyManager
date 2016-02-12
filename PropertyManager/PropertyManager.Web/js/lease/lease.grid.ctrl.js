@@ -4,6 +4,7 @@
     }
     activate();
 
+
     $scope.deleteLease = function (lease) {
         lease.$remove();
         activate();
