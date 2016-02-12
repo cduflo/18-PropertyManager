@@ -6,7 +6,6 @@
 
     $scope.saveProperty = function () {
         $scope.property.$update();
-        alert("Save Successful!");
         $state.go('property.grid');
     };
 });

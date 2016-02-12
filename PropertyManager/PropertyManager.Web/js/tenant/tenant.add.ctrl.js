@@ -8,7 +8,6 @@
         TenantResource.save($scope.tenant, function (data) {
             $scope.tenant = {};
         });
-        alert("Save Successful!");
         $state.go('tenant.grid');
     };
 

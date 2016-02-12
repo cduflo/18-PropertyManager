@@ -1,9 +1,10 @@
 ﻿
 <div class="container-fluid">
-    <div class="text-center">
-        <h1>{{title}}</h1>
-    </div>
-    <form class="form-horizontal" role="form" style="margin-top:60px;">
+
+    <form class="form-horizontal" role="form" style="margin-top:40px;">
+        <div class="text-center">
+            <h1>{{title}}</h1>
+        </div>
         <div class="row">
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
@@ -107,15 +108,17 @@
 </div>
 <div class="container-fluid">
     <div class="text-center">
-        <h1> </h1>
-    </div>
-    <div class="text-center">
-        <div class="col-md-4" style="text-align:center"></div>
+        <div class="col-md-4" style="text-align:center">
+            <a class="btn btn-primary" ng-href="#/property/grid" style="width:100%">
+                Cancel
+            </a>
+        </div>
+        <div class="col-md-4" style="text-align:center">
+        </div>
         <div class="col-md-4" style="text-align:center">
             <button class="btn btn-success" ng-click="saveProperty()" style="width:100%">
                 Save
             </button>
         </div>
-        <div class="col-md-4" style="text-align:center"></div>
     </div>
 </div>

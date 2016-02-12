@@ -19,7 +19,6 @@
         WorkOrderResource.save($scope.workorder, function (data) {
             $scope.workorder = {};
         });
-        alert("Save Successful!");
         $state.go('workorder.grid');
     };
 

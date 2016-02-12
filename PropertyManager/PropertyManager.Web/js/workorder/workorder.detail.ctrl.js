@@ -2,7 +2,7 @@
     //grab id from url bar
     //grab property from /api/properies/{propertyId}
     $scope.workorder = WorkOrderResource.get({ workorderId: $stateParams.id });
-    $scope.properties = PropertyResource.query();//potentially delete with PropertyResource injected above
+    $scope.properties = PropertyResource.query();
     $scope.tenants = TenantResource.query();
     $scope.title = "Work Order Detail";
 
@@ -18,7 +18,6 @@
 
     $scope.saveWorkOrder = function () {
         $scope.workorder.$update();
-        alert("Save Successful!");
         $state.go('workorder.grid');
     };
 });

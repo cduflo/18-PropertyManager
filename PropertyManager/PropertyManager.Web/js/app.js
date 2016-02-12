@@ -4,7 +4,8 @@ angular.module('app').value('apiUrl', 'http://localhost:50227/api');
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
 
-    $stateProvider.state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html', controller: 'DashboardController'})
+    $stateProvider.state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html', controller: 'DashboardController' })
+                  .state('landing', { url: '', templateUrl: '/templates/landing/landing.html', controller: 'LandingController' })
                   .state('property', { url: '/property', abstract: true,  template: '<ui-view/>'})
                      .state('property.grid', {url: '/grid', templateUrl: '/templates/property/property.grid.html', controller: 'PropertyGridController'})
                      .state('property.detail', { url: '/detail/:id', templateUrl: '/templates/property/property.detail.html', controller: 'PropertyDetailController' })

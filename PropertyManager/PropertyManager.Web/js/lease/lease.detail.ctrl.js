@@ -18,7 +18,6 @@
 
     $scope.saveLease = function () {
         $scope.lease.$update();
-        alert("Save Successful!");
         $state.go('lease.grid');
     };
 });

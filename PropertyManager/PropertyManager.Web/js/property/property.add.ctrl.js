@@ -8,7 +8,6 @@
         PropertyResource.save($scope.property, function (data) {
             $scope.property = {};
         });
-        alert("Save Successful!");
         $state.go('property.grid');
     };
 

@@ -19,7 +19,6 @@
         LeaseResource.save($scope.lease, function (data) {
             $scope.lease = {};
         });
-        alert("Save Successful!");
         $state.go('lease.grid');
     };
 
