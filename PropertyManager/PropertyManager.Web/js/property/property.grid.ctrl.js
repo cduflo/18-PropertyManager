@@ -6,8 +6,9 @@
 
     $scope.deleteProperty = function (property) {
         property.$remove();
-        activate();
         $state.reload();
-        alert("Delete Successful!");
+        activate();
+        $scope.tableParams.reload();
+
     };
 });
