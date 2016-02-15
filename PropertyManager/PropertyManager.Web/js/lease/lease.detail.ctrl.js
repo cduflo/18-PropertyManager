@@ -5,17 +5,25 @@
     $scope.tenants = TenantResource.query();
     $scope.properties = PropertyResource.query();
     $scope.lease = LeaseResource.get({ leaseId: $stateParams.id }, function () {
-        $scope.date = $scope.lease.StartDate.toString().substring(0,10);
+        $scope.startDate = $scope.lease.StartDate.toString().substring(0, 10);
+        $scope.endDate = $scope.lease.EndDate.toString().substring(0, 10);
     });
     $scope.title = "Lease Detail";
 
-
-
-    $(function () {
-        $("#datepicker").datepicker({
-            autoclose: true,
-        }).data({ date: '2012-08-08' }).datepicker('update').datepicker().children('input').val('2012-08-08');
+    $(".datepicker").datepicker({
+        format: "yyyy-mm-dd",
+        autoclose: true,
     });
+
+    $scope.getDates = function () {
+        $scope.startDate = $('#startdate').datepicker('getDate');
+        $scope.endDate = $('#enddate').datepicker('getDate');
+    };
+
+    $scope.setDates = function () {
+        $scope.lease.StartDate = $scope.startDate;
+        $scope.lease.EndDate = $scope.endDate;
+    };
 
     $scope.propselect = function (prop) {
         $scope.lease.Property = prop;
@@ -28,6 +36,8 @@
     }
 
     $scope.saveLease = function () {
+        $scope.getDates();
+        $scope.setDates();
         $scope.lease.$update();
         $state.go('lease.grid');
     };

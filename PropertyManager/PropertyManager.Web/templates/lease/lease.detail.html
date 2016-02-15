@@ -46,25 +46,19 @@
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4">
-                <div id="datepicker" class="input-group date" >
-                    <input class="form-control" type="text" readonly />
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                </div>
-
-
-                <!--<div class="form-group">
-                    <label for="inputStartDate" class="col-md-4 control-label">Start Date:</label>
+                <div class="form-group">
+                    <label for="inputEndDate" class="col-md-4 control-label">Start Date:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="lease.StartDate" />
+                        <input id="startdate" class="span2 datepicker" type="text" value={{startDate}} name="startdate" default={{startDate}} data-date={{startDate}} data-behavior="datepicker">
                     </div>
-                </div>-->
+                </div>
+                   
             </div>
-            <pre>{{date}}</pre>
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
                     <label for="inputEndDate" class="col-md-4 control-label">End Date:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="lease.EndDate" />
+                        <input id="enddate" class="span2 datepicker" type="text" value={{endDate}} name="startdate" default={{endDate}} data-date={{endDate}} data-behavior="datepicker">
                     </div>
                 </div>
             </div>

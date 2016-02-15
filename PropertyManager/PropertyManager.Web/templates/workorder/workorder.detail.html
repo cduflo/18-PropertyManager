@@ -65,7 +65,7 @@
                 <div class="form-group">
                     <label for="inputOpened" class="col-md-4 control-label">Opened:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="workorder.OpenedDate" />
+                        <input id="startdate" class="span2 datepicker" type="text" value={{startDate}} name="startdate" default={{startDate}} data-date={{startDate}} data-behavior="datepicker">
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                 <div class="form-group">
                     <label for="inputClosed" class="col-md-4 control-label">Closed:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="workorder.ClosedDate" />
+                        <input id="enddate" class="span2 datepicker" type="text" value={{endDate}} name="startdate" default={{endDate}} data-date={{endDate}} data-behavior="datepicker">
                     </div>
                 </div>
             </div>
