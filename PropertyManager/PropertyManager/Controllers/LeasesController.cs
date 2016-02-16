@@ -15,6 +15,7 @@ using PropertyManager.Models;
 
 namespace PropertyManager.Controllers
 {
+    [Authorize]
     public class LeasesController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();

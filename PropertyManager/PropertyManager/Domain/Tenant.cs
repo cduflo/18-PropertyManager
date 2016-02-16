@@ -14,8 +14,10 @@ namespace PropertyManager.Domain
         public int AddressId { get; set; }
         public string Telephone { get; set; }
         public string EmailAddress { get; set; }
+        public string UserId { get; set; }
 
         public virtual Address Address { get; set; }
+        public virtual PropertyManagerUser User { get; set; }
 
         public virtual ICollection<Lease> Leases { get; set; }
         public virtual ICollection<WorkOrder> WorkOrders { get; set; }

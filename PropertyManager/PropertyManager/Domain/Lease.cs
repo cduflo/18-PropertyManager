@@ -1,6 +1,7 @@
 ﻿using PropertyManager.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -12,6 +13,7 @@ namespace PropertyManager.Domain
         public int TenantId { get; set; }
         public int PropertyId { get; set; }
         public DateTime StartDate { get; set; }
+        //[Column(TypeName = "datetime2")]
         public DateTime? EndDate { get; set; }
         public decimal Rent { get; set; }
         public RentFrequencies RentFrequency { get; set; }

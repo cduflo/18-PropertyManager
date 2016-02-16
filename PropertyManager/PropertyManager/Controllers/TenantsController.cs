@@ -15,6 +15,7 @@ using AutoMapper;
 
 namespace PropertyManager.Controllers
 {
+    [Authorize]
     public class TenantsController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();

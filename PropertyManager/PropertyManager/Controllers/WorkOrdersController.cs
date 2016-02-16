@@ -15,6 +15,7 @@ using AutoMapper;
 
 namespace PropertyManager.Controllers
 {
+    [Authorize]
     public class WorkOrdersController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();
@@ -86,6 +87,7 @@ namespace PropertyManager.Controllers
             {
                 return BadRequest(ModelState);
             }
+
 
             db.WorkOrders.Add(workOrder);
             db.SaveChanges();
