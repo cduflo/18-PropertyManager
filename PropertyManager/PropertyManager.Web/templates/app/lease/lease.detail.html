@@ -1,0 +1,99 @@
+﻿
+<div class="container-fluid">
+    <div class="text-center">
+        <h1>{{title}}</h1>
+    </div>
+    <form class="form-horizontal" role="form" style="margin-top:60px;">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputID" class="col-md-4 control-label">Lease ID:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="lease.LeaseId" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputTenantId" class="col-md-4 control-label">Tenant:</label>
+                    <div class="col-md-8">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style="min-width:auto; width:100%;">
+                                {{lease.Tenant.FirstName}} {{lease.Tenant.LastName}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="tenant in tenants"><a ng-click="tenantselect(tenant)">{{tenant.FirstName}} {{tenant.LastName}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputPropID" class="col-md-4 control-label">Property:</label>
+                    <div class="col-md-8">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="min-width:auto; width:100%;">
+                                {{lease.Property.PropertyName}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="property in properties"><a ng-click="propselect(property)">{{property.PropertyName}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputEndDate" class="col-md-4 control-label">Start Date:</label>
+                    <div class="col-md-8">
+                        <input id="startdate" class="span2 datepicker" type="text" value={{startDate}} name="startdate" default={{startDate}} data-date={{startDate}} data-behavior="datepicker">
+                    </div>
+                </div>
+                   
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputEndDate" class="col-md-4 control-label">End Date:</label>
+                    <div class="col-md-8">
+                        <input id="enddate" class="span2 datepicker" type="text" value={{endDate}} name="startdate" default={{endDate}} data-date={{endDate}} data-behavior="datepicker">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputRent" class="col-md-4 control-label">Rent:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="lease.Rent" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputRentFrequency" class="col-md-4 control-label">Rent Frequency:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="lease.RentFrequency" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-md-4" style="text-align:center">
+            <a class="btn btn-primary" ng-href="#/app/lease/grid" style="width:100%">
+                Cancel
+            </a>
+        </div>
+        <div class="col-md-4" style="text-align:center">
+        </div>
+        <div class="col-md-4" style="text-align:center">
+            <button class="btn btn-success" ng-click="saveLease()" style="width:100%">
+                Save
+            </button>
+        </div>
+    </div>
+</div>

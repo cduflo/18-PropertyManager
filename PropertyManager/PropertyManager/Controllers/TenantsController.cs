@@ -23,14 +23,16 @@ namespace PropertyManager.Controllers
         // GET: api/Tenants
         public IEnumerable<TenantsModel> GetTenants()
         {
-            return Mapper.Map<IEnumerable<TenantsModel>>(db.Tenants);
+            //return Mapper.Map<IEnumerable<TenantsModel>>(db.Tenants);
+            return Mapper.Map<IEnumerable<TenantsModel>>(db.Tenants.Where(p => p.User.UserName == User.Identity.Name));
         }
 
         // GET: api/Tenants/5
         [ResponseType(typeof(TenantsModel))]
         public IHttpActionResult GetTenant(int id)
         {
-            Tenant tenant = db.Tenants.Find(id);
+            //Tenant tenant = db.Tenants.Find(id);
+            Tenant tenant = db.Tenants.FirstOrDefault(p => p.User.UserName == User.Identity.Name && p.TenantId == id);
             if (tenant == null)
             {
                 return NotFound();
@@ -70,7 +72,13 @@ namespace PropertyManager.Controllers
             }
 
 
-            var dbTenants = db.Tenants.Find(id);
+            //var dbTenants = db.Tenants.Find(id);
+            var dbTenants = db.Tenants.FirstOrDefault(p => p.User.UserName == User.Identity.Name && p.TenantId == id);
+            if (dbTenants == null)
+            {
+                return BadRequest();
+            }
+
             dbTenants.Update(tenant);
 
             db.Entry(dbTenants).State = EntityState.Modified;
@@ -104,6 +112,8 @@ namespace PropertyManager.Controllers
                 return BadRequest(ModelState);
             }
 
+            tenant.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+
             db.Tenants.Add(tenant);
             db.SaveChanges();
 
@@ -114,7 +124,8 @@ namespace PropertyManager.Controllers
         [ResponseType(typeof(TenantsModel))]
         public IHttpActionResult DeleteTenant(int id)
         {
-            Tenant tenant = db.Tenants.Find(id);
+            //Tenant tenant = db.Tenants.Find(id);
+            Tenant tenant = db.Tenants.FirstOrDefault(p => p.User.UserName == User.Identity.Name && p.TenantId == id);
             if (tenant == null)
             {
                 return NotFound();

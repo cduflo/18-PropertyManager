@@ -1,0 +1,115 @@
+﻿
+<div class="container-fluid">
+    <div class="text-center">
+        <h1>{{title}}</h1>
+    </div>
+    <form class="form-horizontal" role="form" style="margin-top:60px;">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputID" class="col-md-4 control-label">Tenant ID:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.TenantId" disabled />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputFirstName" class="col-md-4 control-label">First Name:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.FirstName" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputLastName" class="col-md-4 control-label">Last Name:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.LastName" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputTelephone" class="col-md-4 control-label">Telephone:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.Telephone" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputEmail" class="col-md-4 control-label">Email:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.EmailAddress" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <h1>Address</h1>
+    </div>
+    <form class="form-horizontal" role="form" style="margin-top:60px;">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddress1" class="col-md-4 control-label">Address 1:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.Address.Address1" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputAddress2" class="col-md-4 control-label">Address 2:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.Address.Address2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputCity" class="col-md-4 control-label">City:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.Address.City" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputRegion" class="col-md-4 control-label">Region:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.Address.Region" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label for="inputPostCode" class="col-md-4 control-label">Post Code:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="tenant.Address.PostCode" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-md-4" style="text-align:center">
+            <a class="btn btn-primary" ng-href="#/app/tenant/grid" style="width:100%">
+                Cancel
+            </a>
+        </div>
+        <div class="col-md-4" style="text-align:center">
+        </div>
+        <div class="col-md-4" style="text-align:center">
+            <button class="btn btn-success" ng-click="saveTenant()" style="width:100%">
+                Save
+            </button>
+        </div>
+    </div>
+</div>

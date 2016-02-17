@@ -9,8 +9,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-[assembly: OwinStartup(typeof(PropertyManager.Startup))]
-
+[assembly:OwinStartup(typeof(PropertyManager.Startup))]
 namespace PropertyManager
 {
     public class Startup
