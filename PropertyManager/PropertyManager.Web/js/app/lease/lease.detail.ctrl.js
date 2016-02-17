@@ -39,6 +39,6 @@
         $scope.getDates();
         $scope.setDates();
         $scope.lease.$update();
-        $state.go('lease.grid');
+        $state.go('app.lease.grid');
     };
 });

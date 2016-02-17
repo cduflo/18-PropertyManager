@@ -45,7 +45,7 @@ namespace PropertyManager.Controllers
         [Route("api/tenants/{TenantId}/leases")]
         public IEnumerable<LeasesModel> GetLeasesForTenant(int TenantId)
         {
-            var leases = db.Leases.Where(m => m.TenantId == TenantId);
+            var leases = db.Leases.Where(p => p.Property.User.UserName == User.Identity.Name && p.LeaseId == TenantId);
             return Mapper.Map<IEnumerable<LeasesModel>>(leases);
         }
 
@@ -53,7 +53,7 @@ namespace PropertyManager.Controllers
         [Route("api/tenants/{TenantId}/workorders")]
         public IEnumerable<WorkOrdersModel> GetWorkOrdersForTenant(int TenantId)
         {
-            var workOrders = db.WorkOrders.Where(m => m.TenantId == TenantId);
+            var workOrders = db.WorkOrders.Where(p => p.Property.User.UserName == User.Identity.Name && p.WorkOrderId == TenantId); 
             return Mapper.Map<IEnumerable<WorkOrdersModel>>(workOrders);
         }
 

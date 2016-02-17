@@ -7,7 +7,7 @@
                 location.replace('/#/app/dashboard');
             },
             function(err) {
-                alert(err.error_description);
+                alert(err.response);
             });
     };
 });

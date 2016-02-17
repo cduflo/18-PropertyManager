@@ -40,6 +40,6 @@
         $scope.getDates();
         $scope.setDates();
         $scope.workorder.$update();
-        $state.go('workorder.grid');
+        $state.go('app.workorder.grid');
     };
 });

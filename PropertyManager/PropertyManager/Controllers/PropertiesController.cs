@@ -15,23 +15,24 @@ using AutoMapper;
 using System.Data.Entity.Migrations.Model;
 using Microsoft.AspNet.Identity;
 using System.Web;
+using System.Runtime.Remoting.Contexts;
 
 namespace PropertyManager.Controllers
 {
+
+
     [Authorize]
     public class PropertiesController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();
 
+
         // GET: api/Properties
         public IEnumerable<PropertiesModel> GetProperties()
         {
-            //  START HERE, this is remaining null for some reason.. fix it!!
-            var currentUserId = HttpContext.Current.User.Identity.GetUserId();
-            Console.WriteLine(currentUserId);
 
             //return Mapper.Map<IEnumerable<PropertiesModel>>(db.Properties);
-            return Mapper.Map<IEnumerable<PropertiesModel>>(db.Properties.Where(p => p.User.Id == currentUserId));
+            return Mapper.Map<IEnumerable<PropertiesModel>>(db.Properties.Where(p => p.User.UserName == User.Identity.Name));
         }
 
         // GET: api/Properties/5
@@ -53,7 +54,7 @@ namespace PropertyManager.Controllers
         [Route("api/properties/{PropertyId}/workorders")]
         public IEnumerable<WorkOrdersModel> GetWorkOrdersForProperty(int PropertyId)
         {
-            var workOrders = db.WorkOrders.Where(m => m.PropertyId == PropertyId);
+            var workOrders = db.WorkOrders.Where(p => p.Property.User.UserName == User.Identity.Name && p.WorkOrderId == PropertyId);
             return Mapper.Map<IEnumerable<WorkOrdersModel>>(workOrders);
         }
 
@@ -61,7 +62,7 @@ namespace PropertyManager.Controllers
         [Route("api/properties/{PropertyId}/leases")]
         public IEnumerable<LeasesModel> GetLeasesForProperty(int PropertyId)
         {
-            var leases = db.Leases.Where(m => m.PropertyId == PropertyId);
+            var leases = db.Leases.Where(p => p.Property.User.UserName == User.Identity.Name && p.LeaseId == PropertyId);
             return Mapper.Map<IEnumerable<LeasesModel>>(leases);
         }
 
@@ -114,21 +115,17 @@ namespace PropertyManager.Controllers
 
         // POST: api/Properties
         [ResponseType(typeof(Property))]
-        public IHttpActionResult PostProperty(PropertiesModel property)
+        public IHttpActionResult PostProperty(Property property)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var dbProperty = new Property(property);
+            property.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 
-            dbProperty.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
-
-            db.Properties.Add(dbProperty);
+            db.Properties.Add(property);
             db.SaveChanges();
-
-            property.PropertyId = dbProperty.PropertyId;
 
             return CreatedAtRoute("DefaultApi", new { id = property.PropertyId }, property);
         }

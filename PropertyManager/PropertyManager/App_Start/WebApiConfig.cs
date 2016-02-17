@@ -15,6 +15,8 @@ namespace PropertyManager
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var rules = new EnableCorsAttribute("*", "*","*");
+            config.EnableCors(rules);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

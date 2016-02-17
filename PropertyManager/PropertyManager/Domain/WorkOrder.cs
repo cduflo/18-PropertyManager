@@ -8,6 +8,14 @@ namespace PropertyManager.Domain
 {
     public class WorkOrder
     {
+        public WorkOrder(WorkOrdersModel workOrder)
+        {
+            this.Update(workOrder);
+        }
+
+        public WorkOrder()
+        { }
+
         public int WorkOrderId { get; set; }
         public int PropertyId { get; set; }
         public int? TenantId { get; set; }
@@ -27,7 +35,6 @@ namespace PropertyManager.Domain
             OpenedDate = w.OpenedDate;
             ClosedDate = w.ClosedDate;
             Priority = (Priorities)w.Priority;
-
         }
     }
 

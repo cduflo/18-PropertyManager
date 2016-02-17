@@ -8,7 +8,7 @@
         TenantResource.save($scope.tenant, function (data) {
             $scope.tenant = {};
         });
-        $state.go('tenant.grid');
+        $state.go('app.tenant.grid');
     };
 
 });

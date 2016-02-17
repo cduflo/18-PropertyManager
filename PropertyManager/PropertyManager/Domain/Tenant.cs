@@ -6,8 +6,17 @@ using System.Web;
 
 namespace PropertyManager.Domain
 {
+    
     public class Tenant
     {
+        public Tenant(TenantsModel tenant)
+        {
+            this.Update(tenant);
+        }
+
+        public Tenant()
+        { }
+
         public int TenantId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

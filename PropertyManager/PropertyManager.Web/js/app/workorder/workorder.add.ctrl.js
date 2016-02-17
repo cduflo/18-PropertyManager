@@ -36,7 +36,7 @@
         WorkOrderResource.save($scope.workorder, function (data) {
             $scope.workorder = {};
         });
-        $state.go('workorder.grid');
+        $state.go('app.workorder.grid');
     };
 
 });

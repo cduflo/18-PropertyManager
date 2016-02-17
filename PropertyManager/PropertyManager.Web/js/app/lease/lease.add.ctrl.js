@@ -36,7 +36,7 @@
         LeaseResource.save($scope.lease, function (data) {
             $scope.lease = {};
         });
-        $state.go('lease.grid');
+        $state.go('app.lease.grid');
     };
 
 });

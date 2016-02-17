@@ -6,6 +6,6 @@
 
     $scope.saveProperty = function () {
         $scope.property.$update();
-        $state.go('property.grid');
+        $state.go('app.property.grid');
     };
 });

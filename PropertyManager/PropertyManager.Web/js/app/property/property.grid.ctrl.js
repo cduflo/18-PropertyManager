@@ -6,9 +6,9 @@
 
     $scope.deleteProperty = function (property) {
         property.$remove();
-        $state.reload();
         activate();
-        $scope.tableParams.reload();
+        $state.reload();
+       // $scope.tableParams.reload();
 
     };
 });

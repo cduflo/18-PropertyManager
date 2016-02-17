@@ -15,6 +15,7 @@ namespace PropertyManager.Infrastructure
         private PropertyManagerDataContext _db;
         private UserManager<PropertyManagerUser> _userManager;
 
+
         public AuthorizationRepository()
         {
             _db = new PropertyManagerDataContext();

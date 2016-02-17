@@ -7,6 +7,6 @@
 
     $scope.saveTenant = function () {
         $scope.tenant.$update();
-        $state.go('tenant.grid');
+        $state.go('app.tenant.grid');
     };
 });

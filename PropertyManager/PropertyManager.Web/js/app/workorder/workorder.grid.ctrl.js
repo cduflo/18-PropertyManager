@@ -7,9 +7,9 @@
 
     $scope.deleteWorkOrder = function (workorder) {
         workorder.$remove();
-        $state.reload();
         activate();
-        $scope.tableParams.reload();
+        $state.reload();
+        //$scope.tableParams.reload();
 
     };
 });

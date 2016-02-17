@@ -9,6 +9,14 @@ namespace PropertyManager.Domain
 {
     public class Lease
     {
+        public Lease(LeasesModel lease)
+        {
+            this.Update(lease);
+        }
+
+        public Lease()
+        { }
+
         public int LeaseId { get; set; }
         public int TenantId { get; set; }
         public int PropertyId { get; set; }

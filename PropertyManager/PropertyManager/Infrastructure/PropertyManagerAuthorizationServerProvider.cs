@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using PropertyManager.Controllers;
 
 namespace PropertyManager.Infrastructure
 {
@@ -33,8 +34,9 @@ namespace PropertyManager.Infrastructure
                 else
                 {
                     var token = new ClaimsIdentity(context.Options.AuthenticationType);
-                    token.AddClaim(new Claim("sub", context.UserName));
+                    token.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
                     token.AddClaim(new Claim("role", "user"));
+
 
                     context.Validated(token);
                 }
