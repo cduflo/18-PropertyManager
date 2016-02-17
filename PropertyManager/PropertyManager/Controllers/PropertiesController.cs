@@ -13,6 +13,8 @@ using PropertyManager.Infrastructure;
 using PropertyManager.Models;
 using AutoMapper;
 using System.Data.Entity.Migrations.Model;
+using Microsoft.AspNet.Identity;
+using System.Web;
 
 namespace PropertyManager.Controllers
 {
@@ -24,8 +26,12 @@ namespace PropertyManager.Controllers
         // GET: api/Properties
         public IEnumerable<PropertiesModel> GetProperties()
         {
+            //  START HERE, this is remaining null for some reason.. fix it!!
+            var currentUserId = HttpContext.Current.User.Identity.GetUserId();
+            Console.WriteLine(currentUserId);
+
             //return Mapper.Map<IEnumerable<PropertiesModel>>(db.Properties);
-            return Mapper.Map<IEnumerable<PropertiesModel>>(db.Properties.Where(p => p.User.UserName == User.Identity.Name));
+            return Mapper.Map<IEnumerable<PropertiesModel>>(db.Properties.Where(p => p.User.Id == currentUserId));
         }
 
         // GET: api/Properties/5

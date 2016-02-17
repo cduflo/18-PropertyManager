@@ -18,6 +18,7 @@
             function (response) {
                 return response;
             });
+
     };
 
     function login(loginData) {
