@@ -15,5 +15,7 @@ namespace PropertyManager.Models
         public DateTime? EndDate { get; set; }
         public decimal Rent { get; set; }
         public RentFrequencies RentFrequency { get; set; }
+        public TenantsModel Tenant { get; set; }
+        public PropertiesModel Property { get; set; }
     }
 }

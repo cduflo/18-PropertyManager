@@ -8,6 +8,13 @@ namespace PropertyManager.Domain
 {
     public partial class Address
     {
+        public Address() { }
+
+        public Address(AddressesModel model)
+        {
+            this.Update(model);
+        }
+
         public int AddressId { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
@@ -25,6 +32,7 @@ namespace PropertyManager.Domain
 
         public void Update(AddressesModel a)
         {
+            AddressId = a.AddressId;
             Address1 = a.Address1;
             Address2 = a.Address2;
             Address3 = a.Address3;
@@ -36,12 +44,7 @@ namespace PropertyManager.Domain
             International = a.International;
         }
 
-        public Address() { }
 
-        public Address(AddressesModel model)
-        {
-            this.Update(model);
-        }
 
     }
 }

@@ -122,8 +122,16 @@ namespace PropertyManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            property.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+            //var dbProperty = new Property(property);
+            //dbProperty.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 
+            //db.Properties.Add(dbProperty);
+
+            //db.SaveChanges();
+
+            //property.PropertyId = dbProperty.PropertyId;
+
+            property.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             db.Properties.Add(property);
             db.SaveChanges();
 

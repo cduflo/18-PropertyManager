@@ -34,6 +34,7 @@ namespace PropertyManager.Domain
 
         public void Update(PropertiesModel p)
         {
+            PropertyId = p.PropertyId;
             AddressId = p.AddressId;
             PropertyName = p.PropertyName;
             SquareFeet = p.SquareFeet;

@@ -112,8 +112,17 @@ namespace PropertyManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            tenant.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+            //var dbTenant = new Tenant(tenant);
+            //dbTenant.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 
+            //db.Tenants.Add(dbTenant);
+
+            //db.SaveChanges();
+
+            //tenant.TenantId = dbTenant.TenantId;
+
+
+            tenant.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             db.Tenants.Add(tenant);
             db.SaveChanges();
 
