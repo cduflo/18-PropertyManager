@@ -24,14 +24,14 @@
     </thead>
     <tbody>
 
-        <tr ng-repeat="workorder in workorders">
+        <tr ng-repeat="workorder in workorders | orderBy:'WorkOrderId'">
             <td>{{workorder.WorkOrderId}}</td>
             <td>{{workorder.PropertyId}}</td>
             <td>{{workorder.TenantId}}</td>
             <td>{{workorder.Description}}</td>
             <td>{{workorder.Priority}}</td>
-            <td>{{workorder.OpenedDate}}</td>
-            <td>{{workorder.ClosedDate}}</td>
+            <td>{{workorder.OpenedDate.toString().substring(0, 10)}}</td>
+            <td>{{workorder.ClosedDate.toString().substring(0, 10)}}</td>
             <td style="min-width:100px;">
                 <a class="btn btn-info" ng-href="#/app/workorder/detail/{{workorder.WorkOrderId}}">
                     <i class="fa fa-edit" />

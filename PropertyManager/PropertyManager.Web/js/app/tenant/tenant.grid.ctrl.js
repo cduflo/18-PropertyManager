@@ -6,8 +6,9 @@
 
     $scope.deleteTenant = function (tenant) {
         tenant.$remove();
-        $state.reload();
         activate();
-        $scope.tableParams.reload();
+        $state.reload();
+        // $scope.tableParams.reload();
+        //$state.go('.', null, { reload: true });
     };
 });

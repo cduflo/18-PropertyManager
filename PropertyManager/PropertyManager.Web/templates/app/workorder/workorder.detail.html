@@ -9,7 +9,7 @@
                 <div class="form-group">
                     <label for="inputID" class="col-md-4 control-label">Work Order ID:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="workorder.WorkOrderId" disabled/>
+                        <input type="text" class="form-control" ng-model="workorder.WorkOrderId" disabled />
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="form-group">
                     <label for="inputTenant" class="col-md-4 control-label">Tenant:</label>
-                    <div class="col-md-8" >
-                        <div class="dropdown" >
+                    <div class="col-md-8">
+                        <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="min-width:auto; width:100%;">
-                               {{workorder.Tenant.FirstName}} {{workorder.Tenant.LastName}}
+                                {{workorder.Tenant.FirstName}} {{workorder.Tenant.LastName}}
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -57,7 +57,16 @@
                 <div class="form-group">
                     <label for="inputPriority" class="col-md-4 control-label">Priority:</label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" ng-model="workorder.Priority" />
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="min-width:auto; width:100%;">
+                                {{workorder.Priority}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="priority in priorityList"><a ng-click="priorityselect(priority)">{{priority}}</a></li>
+                            </ul>
+                        </div>
+                        <!--<input type="text" class="form-control" ng-model="workorder.Priority" />-->
                     </div>
                 </div>
             </div>

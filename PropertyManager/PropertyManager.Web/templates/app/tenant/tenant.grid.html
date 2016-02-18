@@ -27,7 +27,7 @@
     </thead>
     <tbody>
 
-        <tr ng-repeat="tenant in tenants">
+        <tr ng-repeat="tenant in tenants | orderBy:'TenantId'">
             <td>{{tenant.TenantId}}</td>
             <td>{{tenant.FirstName}}</td>
             <td>{{tenant.LastName}}</td>

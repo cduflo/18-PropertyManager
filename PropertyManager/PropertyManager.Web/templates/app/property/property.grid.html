@@ -28,7 +28,7 @@
     </thead>
     <tbody>
 
-        <tr ng-repeat="property in properties">
+        <tr ng-repeat="property in properties | orderBy:'PropertyId'">
             <td>{{property.PropertyId}}</td>
             <td>{{property.PropertyName}}</td>
             <td>{{property.Address.Address1}}</td>

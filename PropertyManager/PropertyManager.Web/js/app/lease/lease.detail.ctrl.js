@@ -40,5 +40,7 @@
         $scope.setDates();
         $scope.lease.$update();
         $state.go('app.lease.grid');
+        //$state.go('app.lease.grid', null, { reload: true });
+        //$state.transitionTo($state.current, $state.$current.params, { reload: true, inherit: true, notify: true });
     };
 });

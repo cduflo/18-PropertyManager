@@ -6,9 +6,9 @@
 
     $scope.deleteLease = function (lease) {
         lease.$remove();
-
         activate();
         $state.reload();
-        //$scope.tableParams.reload();
+        // $scope.tableParams.reload();
+        //$state.go('.', null, { reload: true });
     };
 });

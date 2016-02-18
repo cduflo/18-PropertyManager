@@ -1,6 +1,6 @@
-﻿angular.module('app', ['ngResource','ui.router', 'LocalStorageModule']);
+﻿angular.module('app', ['ngResource','ui.router', 'LocalStorageModule', 'angularUtils.directives.dirTerminalType']);
 
-angular.module('app').value('apiUrl', 'http://localhost:50227/api');
+angular.module('app').value('apiUrl', 'https://propmanapi.azurewebsites.net/api');
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
     $httpProvider.interceptors.push('AuthenticationInterceptor');

@@ -1,13 +1,17 @@
 ﻿angular.module('app').controller('LeaseAddController', function ($scope, $state, PropertyResource, TenantResource, LeaseResource) {
 
     $scope.properties = PropertyResource.query();
-    $scope.tenants = TenantResource.query();
+    $scope.tenants = TenantResource.query(function () {
+        $scope.endDate = "";
+        $(".datepicker").val('').datepicker('update');
+    });
     $scope.lease = {};
     $scope.title = "Add Lease";
 
+
     $(".datepicker").datepicker({
         format: "yyyy-mm-dd",
-        autoclose: true,
+        autoclose: true
     });
 
     $scope.getDates = function () {
@@ -37,6 +41,8 @@
             $scope.lease = {};
         });
         $state.go('app.lease.grid');
+        //$state.go('app.lease.grid', null, { reload: true });
+        //$state.transitionTo($state.current, $state.$current.params, { reload: true, inherit: true, notify: true });
     };
 
 });
