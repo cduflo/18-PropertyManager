@@ -13,8 +13,8 @@
     <thead>
         <tr>
             <th>Work Order ID</th>
-            <th>Property ID</th>
-            <th>Tenant ID</th>
+            <th>Property</th>
+            <th>Tenant Name</th>
             <th>Description</th>
             <th>Priority</th>
             <th>Opened Date</th>
@@ -26,8 +26,8 @@
 
         <tr ng-repeat="workorder in workorders | orderBy:'WorkOrderId'">
             <td>{{workorder.WorkOrderId}}</td>
-            <td>{{workorder.PropertyId}}</td>
-            <td>{{workorder.TenantId}}</td>
+            <td>{{workorder.Property.PropertyName}}</td>
+            <td>{{lease.Tenant.LastName}}, {{lease.Tenant.FirstName}}</td>
             <td>{{workorder.Description}}</td>
             <td>{{workorder.Priority}}</td>
             <td>{{workorder.OpenedDate.toString().substring(0, 10)}}</td>

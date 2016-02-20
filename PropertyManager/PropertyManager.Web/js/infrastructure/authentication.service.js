@@ -26,6 +26,7 @@
         var data = 'grant_type=password&username=' + loginData.username + '&password=' + loginData.password;
 
         var deferred = $q.defer();
+        logout();
 
         $http.post(apiUrl + '/token', data, {
             headers: {
@@ -34,6 +35,9 @@
         }).success(function (response) {
             localStorageService.set('token', {
                 token: response.access_token
+            });
+            localStorageService.set('user', {
+                user: loginData.username
             });
 
             state.authorized = true;
@@ -49,6 +53,7 @@
     function logout() {
         //this will log the user out
         localStorageService.remove('token');
+        localStorageService.remove('user');
         state.authorized = false;
     };
 
